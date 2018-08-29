@@ -1,28 +1,50 @@
-.App {
-  text-align: center;
+.heading {
+    text-align: center;
+    color: #454A4E;
+    font-weight: normal;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+div.bookingContainer {
+    text-align: center;
+    background: #EFECEC;
+    width: 400px;
+    height: auto;
+    border-radius: 20px;
+    left: calc(50vw - 200px);
+    position: absolute;
+    padding: 20px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+div.block {
+    margin: 10px;
+    display: block;
 }
 
-.App-title {
-  font-size: 1.5em;
+.nameInp {
+    min-width: 300px;
 }
 
-.App-intro {
-  font-size: large;
+div.timeDetails {
+    text-align: center;
+    margin: 20px;
+    left: calc(50vw - 100px);
+    top: 250px;
+    position: absolute;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+div.details, div.time {
+    margin: 10px;
 }
+
+button.bookButton {
+    position: absolute;
+    left: calc(50vw - 50px);
+    top: 350px;
+    background: #FFFFFF;
+    height: 50px;
+    width: auto;
+    font-size: 20px;
+    padding: 2px 20px 2px 20px;
+    border-radius: 25px;
+}
+

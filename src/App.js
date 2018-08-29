@@ -1,18 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h1 className="heading">Table Booking App</h1>
+        <div className="bookingContainer">
+          <div className="block">
+            <label>Name</label>
+            <input className="nameInp" type="text" placeholder="Type your name here"/>
+          </div>
+          <div className="block">
+            <label>Date</label>
+            <input className="dateInp" type="date"/>
+          </div>
+          <div className="block">
+            <label>Time</label>
+            <input className="timeInp" type="time"/>
+          </div>
+          <div className="block">
+            <label>No of Persons</label>
+            <input className="noPInp" type="number" placeholder="0"/>
+          </div>
+
+        </div>
+        <div className="timeDetails">
+          <div className="details">AppointMentDetails</div>
+          <div className="time">1:00pm to 9:00pm</div>
+        </div>
+
+        <button className="bookButton">SignUp</button>
+
+        <div className="bookingStatus"></div>
       </div>
     );
   }
