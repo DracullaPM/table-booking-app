@@ -1,7 +1,24 @@
 import React, { Component } from 'react';
 import './App.css';
+import loaderImg from "./images/loader.gif";
 
 class App extends Component {
+  state = {
+    status: ""
+  }
+
+  checkReservation  = () => {
+    this.setState({
+      status: "checking for availability"
+    });
+
+    window.setTimeout(() => {
+      this.setState({
+        status: ""
+      });
+    }, 2000);
+  }
+
   render() {
     return (
       <div className="App">
@@ -30,9 +47,16 @@ class App extends Component {
           <div className="time">1:00pm to 9:00pm</div>
         </div>
 
-        <button className="bookButton">SignUp</button>
-
-        <div className="bookingStatus"></div>
+        {this.state.status === "" ? 
+            <button className="bookButton" onClick={this.checkReservation}>
+              SignUp
+            </button>
+          :
+            <div className="bookingStatus">
+              <img className="loadingIcon" src={loaderImg} alt="Loading ..."/>
+              {this.state.status}
+            </div>
+        }
       </div>
     );
   }
